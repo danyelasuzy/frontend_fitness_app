@@ -1,0 +1,16 @@
+.contentDiv {
+	margin: 40px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+.loginModalStyle {
+	background-color: #efe3c2;
+	color: #123524;
+	height: 30vh;
+	border-radius: 5px;
+	display: block;
+	padding: 30px;
+}

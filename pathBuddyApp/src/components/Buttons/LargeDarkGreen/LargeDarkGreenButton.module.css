@@ -1,0 +1,19 @@
+.LargeDarkGreenButton {
+    font-family: 'Lato', bold;
+    color: #efe3c2;
+    background-color: #667733;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+    font-size: clamp(12px, 2vw, 20px);
+    cursor: pointer;
+    width: 134px;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}

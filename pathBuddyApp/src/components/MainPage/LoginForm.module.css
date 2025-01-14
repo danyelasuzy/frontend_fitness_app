@@ -1,0 +1,9 @@
+.loginFormStyle {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	font-family: "Lato", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+}
