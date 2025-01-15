@@ -1,4 +1,4 @@
-import Header from "../header/Header";
+import Header from "./header/Header";
 import MainContent from "./MainContent";
 import styles from "./MainPage.module.css";
 
