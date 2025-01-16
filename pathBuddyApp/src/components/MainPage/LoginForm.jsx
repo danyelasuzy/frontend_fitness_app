@@ -35,11 +35,14 @@ const LoginForm = () => {
 
     try {
       // !!!!!add CORRECT LOGIN ROUTE!!!!!!
-      const response = await fetch("http://localhost:3000/api/users/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        "https://path-buddy-d047224ae5e0.herokuapp.com/api/users/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await response.json();
 
@@ -62,7 +65,7 @@ const LoginForm = () => {
     try {
       // ADD CORRECT RESET PASSWORD ROUTE!!!!!
       const response = await fetch(
-        "http://localhost:5174/resetPassword/:token",
+        "https://path-buddy-d047224ae5e0.herokuapp.com/resetPassword/:token",
         {
           method: "PATCH",
           headers: { "Content type": "application/json" },

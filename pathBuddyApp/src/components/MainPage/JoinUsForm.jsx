@@ -61,7 +61,7 @@ const JoinUsForm = () => {
     if (validateForm()) {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/users/register",
+          "https://path-buddy-d047224ae5e0.herokuapp.com/api/users/register",
           {
             method: "POST",
             headers: {
