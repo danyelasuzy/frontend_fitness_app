@@ -1,0 +1,11 @@
+.welcomePageContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.userProfile {
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+}
