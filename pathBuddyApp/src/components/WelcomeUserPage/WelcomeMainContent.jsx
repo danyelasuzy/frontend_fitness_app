@@ -3,7 +3,6 @@ import MediumDarkGreenButton from "../Buttons/MediumDarkGreen/MediumDarkGreenBut
 import styles from "./WelcomeMainContent.module.css";
 
 const WelcomeMainContent = () => {
-
 	return (
 		<section className={styles.welcomePageContent}>
 			<div className={styles.userProfile}>
@@ -19,9 +18,11 @@ const WelcomeMainContent = () => {
 					</div>
 				</div>
 				<div>
-
+					<h3>Current route:</h3>
 				</div>
-				<div></div>
+				<div>
+					<h3>Your badges</h3>
+				</div>
 			</div>
 			<div className="buttons-div">
 				<MediumDarkGreenButton> Chose challenge</MediumDarkGreenButton>
@@ -30,8 +31,8 @@ const WelcomeMainContent = () => {
 				<MediumDarkGreenButton> Check leaderboard</MediumDarkGreenButton>
 				<MediumDarkGreenButton> See friends</MediumDarkGreenButton>
 				<MediumDarkGreenButton> Quit Challenge</MediumDarkGreenButton>
+				<MediumDarkGreenButton> Log out</MediumDarkGreenButton>
 			</div>
-			
 		</section>
 	);
 };

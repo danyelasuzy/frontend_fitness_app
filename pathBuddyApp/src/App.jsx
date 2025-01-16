@@ -13,15 +13,16 @@ import {
 function App() {
 	return (
 		<>
-			<WelcomePage />
+			{/* <WelcomePage /> */}
+
 			<Router>
 				<Routes>
 					{/*Challenge Page*/}
 					{/* <Route path="/challenges" element={<MapLocation />} /> */}
 					{/*Redirect all unknown routes to the root ("/") */}
 					<Route path="*" element={<Navigate to="/" />} />
-					{/* <Route path="/" element={<MainPage />} /> */}
-					{/* <Route path="/welcome-user" element={<WelcomePage />} /> */}
+					<Route path="/" element={<MainPage />} />
+					<Route path="/welcome" element={<WelcomePage />} />
 				</Routes>
 			</Router>
 		</>
