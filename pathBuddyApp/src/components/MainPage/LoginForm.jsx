@@ -32,7 +32,6 @@ const LoginForm = () => {
 			alert("Password cannot be empty!");
 			return;
 		}
-
 		try {
 			const response = await fetch(
 				"https://path-buddy-d047224ae5e0.herokuapp.com/api/users/login",
@@ -43,6 +42,7 @@ const LoginForm = () => {
 					body: JSON.stringify({ email, password }),
 				}
 			);
+
 
 			const data = await response.json();
 
@@ -75,6 +75,7 @@ const LoginForm = () => {
 					body: JSON.stringify({ email }),
 				}
 			);
+
 
 			const data = await response.json();
 
