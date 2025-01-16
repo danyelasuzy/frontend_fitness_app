@@ -1,6 +1,7 @@
+import React from "react";
 import MainPage from "./components/MainPage/MainPage";
 import WelcomePage from "./components/WelcomeUserPage/WelcomePage";
-// import ChallengeLandingPage from './components/MainPage/challenge-landing-page/challenge-landing-page';
+import ChooseChallengePage from "./components/choose-challenge-page/choose-challenge-page";
 
 import {
 	BrowserRouter as Router,
@@ -8,17 +9,17 @@ import {
 	Routes,
 	Navigate,
 } from "react-router-dom";
-// import MapLocation from "./components/MainPage/choose-challenge-page/choose-challenge-page";
 
 function App() {
 	return (
 		<>
-			<WelcomePage />
+			{/* <WelcomePage /> */}
 			<Router>
 				<Routes>
-					{/*Challenge Page*/}
-					{/* <Route path="/challenges" element={<MapLocation />} /> */}
-					{/*Redirect all unknown routes to the root ("/") */}
+					{/* Temporary route for Choose Challenge Page */}
+					<Route path="/choose-challenge" element={<ChooseChallengePage />} />
+
+					{/* Redirect all unknown routes to the root ("/") */}
 					<Route path="*" element={<Navigate to="/" />} />
 					{/* <Route path="/" element={<MainPage />} /> */}
 					{/* <Route path="/welcome-user" element={<WelcomePage />} /> */}
@@ -27,4 +28,7 @@ function App() {
 		</>
 	);
 }
+
 export default App;
+
+

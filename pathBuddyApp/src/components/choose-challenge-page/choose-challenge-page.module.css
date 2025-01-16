@@ -1,0 +1,21 @@
+body {
+    background-color: #efe3c2;
+}
+
+h1 {
+    font-family: 'DynaPuff';
+    color: #123524;
+}
+
+h2 {
+    font-family: 'Lato';
+    font-style: italic;
+    color: #123524
+}
+
+h3{
+    font-family: 'Lato';
+    color: #123524; 
+    font-size: 14px;
+    font-weight: 500;
+}

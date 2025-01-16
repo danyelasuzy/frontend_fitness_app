@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./inputBow1.module.css";
+import styles from "./inputBox1.module.css";
 
 const InputBox1 = ({ placeholder, onInputSubmit}) => {
     const [inputValue, setInputValue] = useState("");

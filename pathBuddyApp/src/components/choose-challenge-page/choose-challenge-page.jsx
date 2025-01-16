@@ -1,23 +1,9 @@
-/*import Map from "../../../../utils/map.jsx";
-
-function MapLocation() {
-  return (
-    <>
-      <div>
-        <Map />
-      </div>
-    </>
-  );
-}
-
-export default MapLocation;*/
-
-/*import React from 'react';
-import './index.css';
-import SmallDarkGreenButton from '../../Buttons/SmallDarkGreen/SmallDarkGreenButton';
-import MediumLightGreenButton from '../../Buttons/MediumLightGreen/MediumLightGreenButton';
-import SmallLightBlueButton from '../../Buttons/SmallLightBlue/SmallLightBlueButton';
-import LargeDarkGreenButton from '../../Buttons/LargeDarkGreen';
+import React from 'react';
+import './choose-challenge-page.module.css';
+import SmallDarkGreenButton from '../Buttons/SmallDarkGreen/SmallDarkGreenButton';
+import MediumLightGreenButton from '../Buttons/MediumLightGreen/MediumLightGreenButton';
+import SmallLightBlueButton from '../Buttons/SmallLightBlue/SmallLightBlueButton';
+import LargeDarkGreenButton from '../Buttons/LargeDarkGreen/LargeDarkGreenButton';
 
 const ChooseChallengePage = () => {
   return (
@@ -74,4 +60,4 @@ const ChooseChallengePage = () => {
   );
 };
 
-export default ChooseChallengePage;*/
+export default ChooseChallengePage;
