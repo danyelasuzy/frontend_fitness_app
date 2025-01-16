@@ -2,6 +2,7 @@ import React from "react";
 import MainPage from "./components/MainPage/MainPage";
 import WelcomePage from "./components/WelcomeUserPage/WelcomePage";
 import ChooseChallengePage from "./components/choose-challenge-page/choose-challenge-page";
+import ChallengeLandingPage from "./components/challenge-landing-page/challenge-landing-page"
 
 import {
 	BrowserRouter as Router,
@@ -13,11 +14,10 @@ import {
 function App() {
 	return (
 		<>
-			{/* <WelcomePage /> */}
+			{<WelcomePage /> }
 			<Router>
 				<Routes>
-					{/* Temporary route for Choose Challenge Page */}
-					<Route path="/choose-challenge" element={<ChooseChallengePage />} />
+				
 
 					{/* Redirect all unknown routes to the root ("/") */}
 					<Route path="*" element={<Navigate to="/" />} />

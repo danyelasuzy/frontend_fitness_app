@@ -1,4 +1,4 @@
-// challenge page to add and check progress
+
 import React from "react";
 import MediumDarkGreenButton from "../Buttons/MediumDarkGreen/MediumDarkGreenButton";
 import MediumLightGreenButton from "../Buttons/MediumLightGreen/MediumLightGreenButton";
@@ -8,7 +8,7 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 import inputBox1 from "../InputBoxes/inputBox1";
 
 const ChallengeLandingPage = () => {
-  const [distance, setDistance] = useState("");
+  /*const [distance, setDistance] = useState("");
 
   const handleAddProgressClick = () => {
     if (distance) {
@@ -17,7 +17,7 @@ const ChallengeLandingPage = () => {
     } else {
       console.error("Please enter your progress before submitting");
     }
-  };
+  };*/
   return (
     <div>
       <div>
