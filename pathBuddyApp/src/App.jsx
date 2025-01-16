@@ -14,15 +14,14 @@ import {
 function App() {
 	return (
 		<>
-			{<WelcomePage /> }
 			<Router>
 				<Routes>
-				
-
+					{/* <WelcomePage /> */}
+          {<WelcomePage /> }
 					{/* Redirect all unknown routes to the root ("/") */}
 					<Route path="*" element={<Navigate to="/" />} />
-					{/* <Route path="/" element={<MainPage />} /> */}
-					{/* <Route path="/welcome-user" element={<WelcomePage />} /> */}
+					<Route path="/" element={<MainPage />} />
+					<Route path="/welcome" element={<WelcomePage />} />
 				</Routes>
 			</Router>
 		</>
