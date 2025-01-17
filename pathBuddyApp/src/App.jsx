@@ -17,7 +17,7 @@ function App() {
 
 			<Router>
 				<Routes>
-					{/*Challenge Page*/}
+					{/* Challenge Page */}
 					{/* <Route path="/challenges" element={<MapLocation />} /> */}
 					{/*Redirect all unknown routes to the root ("/") */}
 					<Route path="*" element={<Navigate to="/" />} />

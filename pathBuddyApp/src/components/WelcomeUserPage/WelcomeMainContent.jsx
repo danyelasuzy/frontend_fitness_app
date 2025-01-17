@@ -1,14 +1,14 @@
 // Main content of user Welcome Page that we have after succesful login
 import MediumDarkGreenButton from "../Buttons/MediumDarkGreen/MediumDarkGreenButton";
 import styles from "./WelcomeMainContent.module.css";
+import exampleIMG from "../../assets/Avatars/bear.png";
 
 const WelcomeMainContent = () => {
 	return (
 		<section className={styles.welcomePageContent}>
-			<div className={styles.userProfile}>
-				<div className={styles.userInfo}>
+			<div className={styles.userInfo}>
 					<div>
-						<img src="" alt="" />
+						<img src={exampleIMG} alt="" />
 					</div>
 					<div>
 						<h3>User name</h3>
@@ -17,6 +17,7 @@ const WelcomeMainContent = () => {
 						<h3>email</h3>
 					</div>
 				</div>
+			<div className={styles.userProfile}>
 				<div>
 					<h3>Current route:</h3>
 				</div>
