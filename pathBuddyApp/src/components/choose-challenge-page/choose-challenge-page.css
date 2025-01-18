@@ -1,63 +1,27 @@
 body {
-    background-color: #efe3c2;
+  background-color: #efe3c2;
 }
 
-h1 {
-    font-family: 'DynaPuff';
-    color: #123524;
+.title {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-h2 {
-    font-family: 'Lato';
-    font-style: italic;
-    color: #123524
+.title h1 {
+  margin-bottom: 10px;
+  font-family: "DynaPuff";
+  color: #123524;
 }
 
-h3{
-    font-family: 'Lato';
-    color: #123524; 
-    font-size: 14px;
-    font-weight: 500;
+.title h2 {
+  font-family: "Lato";
+  font-style: italic;
+  color: #123524;
 }
 
-.route-name {
-    font-weight: bold;
-    font-style: italic;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.card {
-    background-color: #66773350;
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #667733;
-}
-
-.card-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.quote {
-    font-style: italic;
-    text-align: center;
-}
-
-.page-title {
-    text-align: center;
-}
-
-.button-container {
+/* .button-container {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 10px;
@@ -76,7 +40,4 @@ h3{
 .filter-button > :nth-child(1) {
     justify-self: right;
 }
-
-
-
-
+ */

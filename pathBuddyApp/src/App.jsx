@@ -1,4 +1,3 @@
-import React from "react";
 import MainPage from "./components/MainPage/MainPage";
 import WelcomePage from "./components/WelcomeUserPage/WelcomePage";
 import ChooseChallengePage from "./components/choose-challenge-page/choose-challenge-page";

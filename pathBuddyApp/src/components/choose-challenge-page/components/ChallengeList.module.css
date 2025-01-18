@@ -1,0 +1,50 @@
+.challengesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.customModalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f4f4f4;
+  border: 2px solid #ddd;
+  width: 600px;
+  height: 650px;
+  border-radius: 7px;
+}
+
+.selectedCardImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.selectedChallenge h2 {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.selectedChallenge p {
+  color: #333;
+  font-size: 2rem;
+}
+
+.distanceSelected {
+  margin-top: 30px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.customStartButton {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
