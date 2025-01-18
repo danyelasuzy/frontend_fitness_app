@@ -6,11 +6,12 @@ const WelcomePageHeader = () => {
 	const [userName, setUserName] = useState("User");
 
 	useEffect(() => {
-		const storedName = localStorage.getItem("userName");
-		if (storedName) {
-			setUserName(storedName);
+		const storedUser = localStorage.getItem("userData");
+		if (storedUser) {
+			const user = JSON.parse(storedUser);
+			setUserName(user.name);
 		}
-	});
+	}, []);
 
 	return (
 		<header className={styles.welcomeHeader}>
