@@ -1,0 +1,60 @@
+.avatarContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 150px;
+	border-radius: 5px;
+	background-color: hsla(75, 40%, 33%, 0.5);
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.avatarImage {
+	width: 95%;
+	height: 95%;
+	object-fit: contain;
+	border-radius: 5px;
+}
+
+.avatarPlaceholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	color: #123524;
+	font-family: "Lato", sans-serif;
+}
+
+.avatarSelection {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	justify-content: center;
+}
+
+.avatarOption {
+	width: 90px;
+	height: 90px;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+	object-fit: contain;
+	box-shadow: 0 0 7px 0 #123524;
+	padding: 5px;
+	background-color: hsla(75, 40%, 33%, 0.311);
+}
+
+.avatarOption:hover {
+	transform: scale(1.1);
+}
+
+.avatarsModalStyle {
+	width: 80vw;
+	height: auto;
+	background-color: #efe3c2;
+	padding: 20px;
+	box-shadow: 0 0 15px 0 black;
+	border-radius: 5px;
+}

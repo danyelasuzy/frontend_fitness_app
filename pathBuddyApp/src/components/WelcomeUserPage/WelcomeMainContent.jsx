@@ -4,6 +4,7 @@ import styles from "./WelcomeMainContent.module.css";
 import AgeIcon from "../../assets/Icons/calendar-month.svg";
 import LocationPin from "../../assets/Icons/map-pin.svg";
 import MailIcon from "../../assets/Icons/mail.svg";
+import AvatarDisplay from "./AvatarDisplay";
 
 const WelcomeMainContent = () => {
 	return (
@@ -11,7 +12,7 @@ const WelcomeMainContent = () => {
 			{/* Avatar with user info */}
 			<section className={styles.userProfile}>
 				<div>
-					<div aria-placeholder="choose avatar" className={styles.avatar}></div>
+					<AvatarDisplay />
 				</div>
 				<div className={styles.personalInfo}>
 					<h4>
