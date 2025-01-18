@@ -32,7 +32,6 @@ const LoginForm = () => {
 			alert("Password cannot be empty!");
 			return;
 		}
-
 		try {
 			const response = await fetch(
 				"https://path-buddy-d047224ae5e0.herokuapp.com/api/users/login",
@@ -49,7 +48,7 @@ const LoginForm = () => {
 			if (response.ok) {
 				console.log("Login successful:", data);
 				localStorage.setItem("authToken", data.token);
-				localStorage.setItem("userName", data.data.user.name);
+				localStorage.setItem("userData", JSON.stringify(data.data.user));
 				window.location.href = "/welcome";
 			} else {
 				alert(data.message || "Login failed!");
@@ -66,7 +65,6 @@ const LoginForm = () => {
 			return;
 		}
 		try {
-			// ADD CORRECT RESET PASSWORD ROUTE!!!!!
 			const response = await fetch(
 				"https://path-buddy-d047224ae5e0.herokuapp.com/api/resetPassword/:token",
 				{

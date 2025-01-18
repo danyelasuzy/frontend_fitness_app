@@ -1,0 +1,21 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.inputBox {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: rgba(18, 53, 36, 0.5);
+    background-color: rgba(160, 120, 63, 0.3);
+    outline: none;
+    border: 2px solid #123524;
+    width: 113px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+

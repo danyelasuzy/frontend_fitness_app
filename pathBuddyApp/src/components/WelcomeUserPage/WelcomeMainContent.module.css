@@ -1,34 +1,105 @@
+body {
+	margin: 0 auto;
+	width: 100vw;
+}
+
 .welcomePageContent {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	height: 70vh;
-	width: 95%;
+	flex-direction: column;
+	align-items: center;
+	width: 95vw;
+	min-height: 100vh;
+	padding: 20px;
+	box-sizing: border-box;
 }
 
 .userProfile {
 	display: flex;
-	flex-direction: column;
-	width: 60%;
-	height: 60vh;
+	width: 100%;
+	justify-content: flex-start;
+	gap: 20px;
+	align-items: center;
+	padding: 10px;
+	background-color: rgba(160, 120, 63, 0.251);
+	border-radius: 5px;
+	box-shadow: 0 0 5px 0px black;
 }
 
-.userInfo {
+.avatar {
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+	background-color: hsla(75, 40%, 33%, 0.5);
+}
+
+.personalInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+h4 {
+	font-family: "Lato", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	font-style: italic;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	color: #123524;
+}
+
+.welcomeH2 {
+	font-family: "Lato", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 400;
+	font-style: italic;
+	color: #123524;
+}
+
+.containerForBtnAndAchievemens {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
-	width: 100%;
+	justify-content: space-between;
 	gap: 20px;
-	justify-content: center;
+	margin-top: 20px;
+	width: 100%;
 }
 
-img {
-	width: 100px;
-	height: 120px;
+.userAchievements {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap:20px;
+	width: 60%;
+	height: auto;
+	border-radius: 5px;
+	box-shadow: 0 0 5px 0px black;
+	background-color: rgba(160, 120, 63, 0.251);
 }
 
-.buttons-div {
-	width: 100px;
-	height: 100%;
-	margin: 20px;
+.routeContainer{
+	width: 98%;
+	background-color: rgb(112, 18, 2);
+	/* height to change for auto probably */
+	height: 150px; 
+}
+
+.badgesContainer{
+	width: 98%;
+	height: 150px;
+	border:1px solid black
+
+}
+.buttons {
+	display: flex;
+	flex-direction: column;
+	width: 160px;
+	height: auto;
+	padding: 5px;
+	background-color: rgba(160, 120, 63, 0.251);
+	align-items: center;
+	gap: 3px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px 0px black;
 }
