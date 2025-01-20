@@ -1,0 +1,57 @@
+body {
+  background-color: #efe3c2;
+}
+
+.MainContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.TitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.Title {
+  padding-left: 40px;
+  font-size: 4rem;
+  font-family: "DynaPuff";
+  color: #123524;
+}
+
+.ChallengeTitle {
+  font-family: "Lato";
+  font-style: italic;
+  padding-left: 60px;
+  padding-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.MapContainer {
+  width: 60%;
+}
+
+.InfoBoxContainer {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* h1 {
+    font-family: 'DynaPuff';
+    color: #123524;
+}
+h2 {
+    font-family: 'Lato';
+    font-style: italic;
+    color: #123524
+}
+h3{
+    font-family: 'Lato';
+    color: #123524; 
+    font-size: 14px;
+    font-weight: 500;
+} */
