@@ -3,10 +3,11 @@ import ChallengeCard from "./ChallengeCard";
 import styles from "./ChallengeList.module.css";
 import Modal from "../../Modal/Modal";
 import useModalManager from "../../Modal/useModalManager";
-import LargeDarkGreenButton from "../../Buttons/LargeDarkGreen/LargeDarkGreenButton";
+import StartChallengeButton from "./StartChallengeButton";
 
 export const ChallengesList = () => {
   const [challenges, setChallenges] = useState([]);
+  // const [localImages, setLocalImages] = useState({});//for local images
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -47,6 +48,30 @@ export const ChallengesList = () => {
     fetchChallenges();
   }, []);
 
+  // Fetch local images
+  // useEffect(() => {
+  //   const loadLocalImages = () => {
+  //     const images = {
+  //       challenge1: "/challengesImages/amsterdam.png",
+  //       challenge2: "/challengesImages/athens.png",
+  //       challenge3: "/challengesImages/barcelona.png",
+  //       challenge4: "/challengesImages/brussels.png",
+  //       challenge5: "/challengesImages/bucharest.png",
+  //       challenge6: "/challengesImages/copenhagen.png",
+  //       challenge7: "/challengesImages/genoa.png",
+  //       challenge8: "/challengesImages/johngroat.png",
+  //       challenge9: "/challengesImages/lisbon.png",
+  //       challenge10: "/challengesImages/paris.png",
+  //       challenge11: "/challengesImages/rome.png",
+  //       challenge12: "/challengesImages/vienna.png",
+  //     };
+
+  //     setLocalImages(images);
+  //   };
+
+  //   loadLocalImages();
+  // }, []);
+
   // Modal open handler
   const handleOpenModal = (challenge) => {
     setSelectedChallenge(challenge);
@@ -69,6 +94,11 @@ export const ChallengesList = () => {
         <ChallengeCard
           key={challenge._id}
           challenge={challenge}
+          // challenge={{
+          //   ...challenge,
+          //   // Attach local image based on some identifier (e.g., challenge.imageKey)
+          //   img: localImages[challenge.imageKey],
+          // }}
           onFindOutMore={() => handleOpenModal(challenge)}
         />
       ))}
@@ -94,7 +124,12 @@ export const ChallengesList = () => {
               </p>
             </div>
             <div className={styles.customStartButton}>
-              <LargeDarkGreenButton>Start Challenge</LargeDarkGreenButton>
+              <StartChallengeButton
+                challengeId={selectedChallenge._id}
+                challenge={selectedChallenge}
+              >
+                Start Challenge
+              </StartChallengeButton>
             </div>
           </div>
         </Modal>

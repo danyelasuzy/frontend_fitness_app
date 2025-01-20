@@ -28,8 +28,10 @@
 }
 
 .challengeCardDetails h2 {
+  font-family: "Lato";
+  font-style: italic;
   margin: 0 0 10px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #333;
 }
 
@@ -37,6 +39,7 @@
   margin: 5px 0;
   color: #555;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .customButton {

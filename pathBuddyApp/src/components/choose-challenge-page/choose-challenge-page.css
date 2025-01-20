@@ -1,8 +1,11 @@
 body {
   background-color: #efe3c2;
+  margin: 0 auto;
+  width: 100vw;
 }
 
 .title {
+  font-size: 1.5rem;
   margin-top: 20px;
   display: flex;
   align-items: center;

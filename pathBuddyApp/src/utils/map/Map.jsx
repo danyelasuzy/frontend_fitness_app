@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import avatarImage from "../../assets/Avatars/lazyPanda.png"; // Replace with your avatar image path
+import avatarImage from "../../assets/Avatars/lazyPanda.png";
 
 export default function Map() {
   const mapRef = useRef(null);
