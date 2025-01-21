@@ -23,6 +23,7 @@ body {
 	background-color: rgba(160, 120, 63, 0.251);
 	border-radius: 5px;
 	box-shadow: 0 0 5px 0px black;
+	text-wrap: wrap;
 }
 
 .personalInfo {
@@ -77,7 +78,6 @@ h4 {
 	/* height to change for auto probably */
 	height: 150px;
 	object-fit: contain;
-
 }
 
 .badgesContainer {

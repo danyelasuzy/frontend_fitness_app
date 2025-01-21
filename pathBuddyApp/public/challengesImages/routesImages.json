@@ -1,0 +1,32 @@
+{
+	"routes": {
+		"startPoint": {
+			"amsterdam": "/challengesImages/amsterdam.jpg",
+			"brussels": "/challengesImages/brussels.jpg",
+			"copenhagen": "/challengesImages/copenhagen.jpg",
+			"lisbon": "/challengesImages/lisbon.jpg",
+			"montpellier": "/challengesImages/montpellier.jpg",
+			"athens": "/challengesImages/athens.jpg",
+			"rome": "/challengesImages/rome.jpg",
+			"prague": "/challengesImages/prague.jpg",
+			"john": "/challengesImages/john-ogroats.jpg",
+			"bucharest": "/challengesImages/bucharest.jpg",
+			"vienna": "/challengesImages/vienna.jpg",
+			"warsaw": "/challengesImages/warsaw.jpg"
+		},
+		"endPoint": {
+			"barcelona": "/challengesImages/barcelona.jpg",
+			"genoa": "/challengesImages/genoa.jpg",
+			"paris": "/challengesImages/paris.jpg",
+			"berlin": "/challengesImages/berlin.jpg",
+			"cadiz": "/challengesImages/cadiz.jpg",
+			"dijon": "/challengesImages/dijon.jpg",
+			"gothenburg": "/challengesImages/gothenburg.jpg",
+			"kyiv": "/challengesImages/kyiv.jpg",
+			"end": "/challengesImages/landsend.jpg",
+			"luxembourg": "/challengesImages/luxembourg.jpg",
+			"milan": "/challengesImages/milan.jpg",
+			"tirana": "/challengesImages/tirana.jpg"
+		}
+	}
+}

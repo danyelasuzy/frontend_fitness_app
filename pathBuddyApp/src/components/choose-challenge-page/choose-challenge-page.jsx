@@ -18,7 +18,7 @@ const ChooseChallengePage = () => {
       </div>
       <ChallengeList />
       <div>
-        <SmallDarkGreenButton>Back</SmallDarkGreenButton>
+        <SmallDarkGreenButton onClick={() => window.history.back()}>Back</SmallDarkGreenButton>
       </div>
     </>
   );

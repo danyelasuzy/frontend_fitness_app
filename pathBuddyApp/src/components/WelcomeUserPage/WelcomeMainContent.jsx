@@ -3,9 +3,11 @@ import MediumDarkGreenButton from "../Buttons/MediumDarkGreen/MediumDarkGreenBut
 import styles from "./WelcomeMainContent.module.css";
 import AvatarDisplay from "./AvatarDisplay";
 import DisplayPersolnalInfo from "./DisplayPersonalInfo";
+import { useNavigate } from "react-router-dom";
 // import Map from "../../utils/map/Map";
 
 const WelcomeMainContent = () => {
+	const navigate = useNavigate();
 	return (
 		<div className={styles.welcomePageContent}>
 			{/* Avatar with user info */}
@@ -34,13 +36,31 @@ const WelcomeMainContent = () => {
 					</div>
 				</section>
 				<section className={styles.buttons}>
-					<MediumDarkGreenButton> Chose challenge</MediumDarkGreenButton>
-					<MediumDarkGreenButton> Add progress</MediumDarkGreenButton>
-					<MediumDarkGreenButton> Check progress</MediumDarkGreenButton>
+					<MediumDarkGreenButton onClick={() => navigate("/chooseChallenge")}>
+						{" "}
+						Chose challenge
+					</MediumDarkGreenButton>
+					<MediumDarkGreenButton onClick={() => navigate("/challenge/:id")}>
+						{" "}
+						Add progress
+					</MediumDarkGreenButton>
+					<MediumDarkGreenButton onClick={() => navigate("/challenge/:id")}>
+						{" "}
+						Check progress
+					</MediumDarkGreenButton>
 					<MediumDarkGreenButton> Check leaderboard</MediumDarkGreenButton>
 					<MediumDarkGreenButton> See friends</MediumDarkGreenButton>
 					<MediumDarkGreenButton> Quit Challenge</MediumDarkGreenButton>
-					<MediumDarkGreenButton> Log out</MediumDarkGreenButton>
+					<MediumDarkGreenButton
+						onClick={() => {
+							localStorage.removeItem("authToken");
+							localStorage.removeItem("userData");
+							navigate("/");
+						}}
+					>
+						{" "}
+						Log out
+					</MediumDarkGreenButton>
 				</section>
 			</section>
 		</div>
