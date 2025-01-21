@@ -1,10 +1,9 @@
 // Main content of user Welcome Page that we have after succesful login
 import MediumDarkGreenButton from "../Buttons/MediumDarkGreen/MediumDarkGreenButton";
 import styles from "./WelcomeMainContent.module.css";
-import AgeIcon from "../../assets/Icons/calendar-month.svg";
-import LocationPin from "../../assets/Icons/map-pin.svg";
-import MailIcon from "../../assets/Icons/mail.svg";
 import AvatarDisplay from "./AvatarDisplay";
+import DisplayPersolnalInfo from "./DisplayPersonalInfo";
+// import Map from "../../utils/map/Map";
 
 const WelcomeMainContent = () => {
 	return (
@@ -15,18 +14,7 @@ const WelcomeMainContent = () => {
 					<AvatarDisplay />
 				</div>
 				<div className={styles.personalInfo}>
-					<h4>
-						<img src={AgeIcon} alt="Icon for age" />
-						Age
-					</h4>
-					<h4>
-						<img src={LocationPin} alt="Location pin" />
-						Location
-					</h4>
-					<h4>
-						<img src={MailIcon} alt="Email icon" />
-						email
-					</h4>
+					<DisplayPersolnalInfo />
 				</div>
 			</section>
 			<section className={styles.containerForBtnAndAchievemens}>
@@ -35,7 +23,10 @@ const WelcomeMainContent = () => {
 				<section className={styles.userAchievements}>
 					<div>
 						<h2 className="welcomeH2">Current route:</h2>
-						<div className={styles.routeContainer}></div>
+						<div className={styles.routeContainer}>
+							{/* We need to set up props in map component */}
+							{/* <Map /> */}
+						</div>
 					</div>
 					<div>
 						<h2 className="welcomeH2">Your badges:</h2>
