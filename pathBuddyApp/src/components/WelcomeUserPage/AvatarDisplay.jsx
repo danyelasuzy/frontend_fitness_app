@@ -15,7 +15,7 @@ const AvatarDisplay = () => {
 
 	// Taking avatar from localStorage
 	useEffect(() => {
-		const userData = JSON.parse(localStorage.getItem("user"));
+		const userData = JSON.parse(localStorage.getItem("userData"));
 		if (userData?.avatarUrl) {
 			setAvatar(userData.avatarUrl);
 		}
@@ -41,9 +41,9 @@ const AvatarDisplay = () => {
 		setAvatar(selectedAvatar);
 
 		// Actualization in localstorage
-		const userData = JSON.parse(localStorage.getItem("user")) || {};
+		const userData = JSON.parse(localStorage.getItem("userData")) || {};
 		userData.avatarUrl = selectedAvatar;
-		localStorage.setItem("user", JSON.stringify(userData));
+		localStorage.setItem("userData", JSON.stringify(userData));
 
 		// Sending to backend!!
 		try {

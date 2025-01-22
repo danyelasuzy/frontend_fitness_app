@@ -1,43 +1,43 @@
-body {
-  background-color: #efe3c2;
-}
-
 .MainContainer {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
 }
 
 .TitleContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 40px;
 }
 
 .Title {
-  padding-left: 40px;
-  font-size: 4rem;
-  font-family: "DynaPuff";
-  color: #123524;
+	padding-left: 40px;
+	font-size: 4rem;
+	font-family: "DynaPuff";
+	color: #123524;
 }
 
 .ChallengeTitle {
-  font-family: "Lato";
-  font-style: italic;
-  padding-left: 60px;
-  padding-bottom: 20px;
-  font-size: 2rem;
-  color: #333;
+	font-family: "Lato";
+	font-style: italic;
+	padding-left: 60px;
+	padding-bottom: 20px;
+	font-size: 2rem;
+	color: #333;
 }
 
 .MapContainer {
-  width: 60%;
+	width: 70vw;
+	height: 50vh;
 }
 
 .InfoBoxContainer {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	width: 90%;
 }
 
 /* h1 {

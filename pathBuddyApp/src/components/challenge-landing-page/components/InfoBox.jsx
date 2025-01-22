@@ -2,13 +2,14 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import ProgressInput from "./ProgressInput";
 import styles from "./InfoBox.module.css";
-const InfoBox = () => {
+
+const InfoBox = ({ challenge, progressKm, setProgressKm }) => {
 	const location = useLocation();
-	const { challenge } = location.state || {};
+
 	if (!challenge || !challenge.distance) {
 		return <div>No challenge data available</div>;
 	}
-	const [progressKm, setProgressKm] = useState(0);
+
 	// Calculate remaining distance
 	const distanceUntilDestination = challenge.distance - progressKm;
 	// Calculate progress percentage (rounded to an integer)
