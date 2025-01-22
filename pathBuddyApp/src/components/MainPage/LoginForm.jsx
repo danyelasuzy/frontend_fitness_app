@@ -5,7 +5,6 @@ import styles from "./LoginForm.module.css";
 const LoginForm = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-
 	const [isForgotPassword, setForgotPassword] = useState(false);
 
 	const handleForgotPassword = () => {

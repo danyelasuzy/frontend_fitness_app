@@ -8,7 +8,9 @@ const WelcomePage = () => {
 			<WelcomePageHeader />
 			<WelcomeMainContent />
 			<footer>
-				<SmallDarkGreenButton>Back</SmallDarkGreenButton>
+				<SmallDarkGreenButton onClick={() => window.history.back()}>
+					Back
+				</SmallDarkGreenButton>
 			</footer>
 		</>
 	);

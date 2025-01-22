@@ -10,10 +10,20 @@ export const ChallengesList = () => {
 	// const [localImages, setLocalImages] = useState({});//for local images
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
+	const [challengeImages, setChallengeImages] = useState(null);
 
 	// States for Modals
 	const { isOpen, openModal, closeModal } = useModalManager(false);
 	const [selectedChallenge, setSelectedChallenge] = useState(null);
+
+	useEffect(() => {
+		fetch("/challengesImages/routesImages.json")
+			.then((res) => res.json())
+			.then((data) => {
+				setChallengeImages(data.routes); // Przechowujemy `routes`
+			})
+			.catch((error) => console.error("Error fetching images:", error));
+	}, []);
 
 	useEffect(() => {
 		const fetchChallenges = async () => {
@@ -72,7 +82,22 @@ export const ChallengesList = () => {
 
 	// Modal open handler
 	const handleOpenModal = (challenge) => {
-		setSelectedChallenge(challenge);
+		if (!challengeImages) return;
+
+		// Pobranie pierwszego słowa z nazwy
+		const firstWord = challenge.name.split(" ")[0].toLowerCase();
+		console.log("First word for modal:", firstWord);
+
+		// Pobranie ścieżki do obrazka
+		const imagePath = challengeImages.startPoint[firstWord] || null;
+		console.log("Image path for modal:", imagePath);
+
+		// Dodanie obrazka do challenge
+		setSelectedChallenge({
+			...challenge,
+			img: imagePath || "/placeholder.jpg", // Jeśli nie ma obrazka, dodajemy placeholder
+		});
+
 		openModal();
 	};
 
@@ -110,7 +135,7 @@ export const ChallengesList = () => {
 					<div className={styles.selectedChallenge}>
 						<h2>{selectedChallenge.name}</h2>
 						<div className={styles.selectedCardImage}>
-							<img src={selectedChallenge.img} alt={selectedChallenge.name} />
+							<img src={selectedChallenge.img} alt={selectedChallenge.name} className={styles.routeImage}/>
 						</div>
 						<p>{selectedChallenge.description}</p>
 						<div className={styles.distanceSelected}>
