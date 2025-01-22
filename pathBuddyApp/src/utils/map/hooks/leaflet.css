@@ -1,4 +1,4 @@
 #map {
-	height: 100vh; /* Full viewport height */
-	width: 400px; /* Full width */
+	height: 100%; /* Full viewport height */
+	width: 100%; /* Full width */
 }

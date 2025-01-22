@@ -10,12 +10,12 @@ const ChallengeCard = ({ challenge, onFindOutMore }) => {
 		fetch("/challengesImages/routesImages.json")
 			.then((res) => res.json())
 			.then((data) => {
-				setChallengeImages(data.routes); // Zapisujemy tylko obiekt `routes`
+				setChallengeImages(data.routes); // 
 			})
 			.catch((error) => console.error("Error fetching images:", error));
 	}, []);
 
-	if (!challengeImages) return null; // Unikamy błędów, jeśli `challengeImages` jeszcze się nie załadowało
+	if (!challengeImages) return null; 
 
 	const firstWord = challenge.name.split(" ")[0].toLowerCase();
 	console.log("First word:", firstWord);

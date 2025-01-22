@@ -84,18 +84,16 @@ export const ChallengesList = () => {
 	const handleOpenModal = (challenge) => {
 		if (!challengeImages) return;
 
-		// Pobranie pierwszego słowa z nazwy
+		// First word from challange name to choose correct img
 		const firstWord = challenge.name.split(" ")[0].toLowerCase();
 		console.log("First word for modal:", firstWord);
 
-		// Pobranie ścieżki do obrazka
 		const imagePath = challengeImages.startPoint[firstWord] || null;
 		console.log("Image path for modal:", imagePath);
 
-		// Dodanie obrazka do challenge
 		setSelectedChallenge({
 			...challenge,
-			img: imagePath || "/placeholder.jpg", // Jeśli nie ma obrazka, dodajemy placeholder
+			img: imagePath 
 		});
 
 		openModal();
