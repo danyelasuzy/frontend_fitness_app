@@ -48,7 +48,8 @@ const InfoBox = ({ challenge, progressKm, setProgressKm }) => {
 						className={styles.ProgresBarFilled}
 						style={{
 							width: `${progressPercentage}%`,
-							background: progressPercentage === 100 ? "blue" : "green",
+							background:
+								progressPercentage === 100 ? "greenyellow" : "green",
 							height: "100%",
 						}}
 					></div>

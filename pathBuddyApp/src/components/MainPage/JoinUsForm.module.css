@@ -1,4 +1,4 @@
-.loginFormStyle {
+.joinUsFormStyle {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -8,8 +8,12 @@
 	font-size: 16px;
 }
 
-.loginFormStyle input{
+.joinUsFormStyle input {
 	padding: 5px 10px;
-    font-style: italic;
+	font-style: italic;
 	background-color: #f2f0ea;
+}
+
+.joinUsFormStyle h2 {
+	color: #123524;
 }

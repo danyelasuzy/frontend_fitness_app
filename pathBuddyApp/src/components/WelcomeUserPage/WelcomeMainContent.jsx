@@ -4,7 +4,7 @@ import styles from "./WelcomeMainContent.module.css";
 import AvatarDisplay from "./AvatarDisplay";
 import DisplayPersolnalInfo from "./DisplayPersonalInfo";
 import { useNavigate } from "react-router-dom";
-// import Map from "../../utils/map/Map";
+import Map from "../../utils/map/Map";
 
 const WelcomeMainContent = () => {
 	const navigate = useNavigate();
@@ -26,8 +26,7 @@ const WelcomeMainContent = () => {
 					<div>
 						<h2 className="welcomeH2">Current route:</h2>
 						<div className={styles.routeContainer}>
-							{/* We need to set up props in map component */}
-							{/* <Map /> */}
+							<Map />
 						</div>
 					</div>
 					<div>

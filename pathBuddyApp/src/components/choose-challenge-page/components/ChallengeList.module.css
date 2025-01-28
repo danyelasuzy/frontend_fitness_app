@@ -9,53 +9,56 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: white;
-	border: 2px solid #ddd;
-	width: 600px;
-	height: 650px;
+	background: #eeeadc;
+	width: 80vw;
+	height: auto;
 	border-radius: 7px;
+	padding: 20px 40px;
+	box-shadow: 0 0 15px 0 black;
 }
 
 .selectedCardImage {
-	width: 100%;
-	height: 270px;
-	justify-content: center;
+	width: 70%;
+	height: auto;
+	margin: 0 auto;
+
+	/* object-fit: cover; */
 }
 
 .routeImage {
 	width: 100%;
-	height: 250px;
+	height: 100%;
+	object-fit: cover;
+	box-shadow: 0 0 15px 0 black;
+}
+
+.selectedChallenge {
+	font-family: "Lato";
+	font-style: italic;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	color: #123524;
 }
 
 .selectedChallenge h2 {
 	text-align: center;
 	margin: 0 0 10px;
-	color: #333;
-	font-family: "Lato";
-	font-style: italic;
-	font-size: 2rem;
+	font-size: 3rem;
+	font-weight: 700;
 }
 
 .selectedChallenge p {
-	color: #333;
-	font-size: 2rem;
-	font-family: "Lato";
-	font-style: italic;
 	font-size: 1.5rem;
 }
 
 .distanceSelected {
-	margin-top: 30px;
-	margin-left: 60px;
 	display: flex;
 	flex-direction: row;
 	gap: 40px;
-	font-family: "Lato";
+	align-items: center;
 }
 
 .customStartButton {
-	margin-top: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	margin: 0 auto;
 }

@@ -5,10 +5,11 @@ import LargeDarkGreenButton from "../../Buttons/LargeDarkGreen/LargeDarkGreenBut
 const StartChallengeButton = ({ challengeId, challenge }) => {
 	const navigate = useNavigate();
 	const handleStartChallenge = () => {
+		
 		navigate(`/challenge/${challengeId}`, { state: { challenge } });
 	};
 	return (
-		<LargeDarkGreenButton onClick={handleStartChallenge}>
+		<LargeDarkGreenButton onClick={handleStartChallenge} >
 			Start Challenge
 		</LargeDarkGreenButton>
 	);
@@ -16,6 +17,7 @@ const StartChallengeButton = ({ challengeId, challenge }) => {
 StartChallengeButton.propTypes = {
 	challengeId: PropTypes.string.isRequired,
 	challenge: PropTypes.string.isRequired,
+	
 	// Enforces the requirement
 };
 export default StartChallengeButton;

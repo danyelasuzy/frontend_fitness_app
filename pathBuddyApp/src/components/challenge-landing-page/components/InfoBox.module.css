@@ -4,11 +4,12 @@ body {
 	overflow-x: hidden;
 }
 .BoxContainer {
-	margin-left: 30px;
-	padding-left: 20px 40px;
 	background-color: rgba(102, 119, 51, 0.5);
 	width: 100%;
 	height: auto;
+	padding: 15px 30px;
+	border-radius: 5px;
+	box-shadow: 0 0 15px 0 black;
 }
 p {
 	font-size: 2rem;
