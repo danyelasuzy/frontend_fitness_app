@@ -4,13 +4,37 @@
 	flex-direction: column;
 	align-items: center;
 	padding: 20px;
+	gap: 20px;
 }
 
-.loginModalStyle {
+.loginModalStyle,
+.registerModalStyle {
 	background-color: #efe3c2;
 	color: #123524;
-	height: 30vh;
 	border-radius: 5px;
 	display: block;
 	padding: 30px;
+}
+
+.loginModalStyle {
+	height: 40vh;
+}
+
+.registerModalStyle {
+	height: auto;
+}
+
+.loginButtonsContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.contentDiv h2,
+q {
+	font-family: "Lato", serif;
+	font-weight: 700;
+	font-style: italic;
+	font-size: 2rem;
+	color: #123524;
 }

@@ -3,6 +3,7 @@
 	flex-direction: column;
 	width: 100%;
 	justify-content: center;
+	margin-bottom: 30px;
 }
 
 .TitleContainer {
@@ -31,27 +32,14 @@
 .MapContainer {
 	width: 70vw;
 	height: 50vh;
+	box-shadow: 0 0 30px 0 black;
+	margin: 0 auto;
+	
 }
 
 .InfoBoxContainer {
-	margin-top: 50px;
+	margin: 50px 0 0 30px;
 	display: flex;
 	flex-direction: column;
 	width: 90%;
 }
-
-/* h1 {
-    font-family: 'DynaPuff';
-    color: #123524;
-}
-h2 {
-    font-family: 'Lato';
-    font-style: italic;
-    color: #123524
-}
-h3{
-    font-family: 'Lato';
-    color: #123524; 
-    font-size: 14px;
-    font-weight: 500;
-} */

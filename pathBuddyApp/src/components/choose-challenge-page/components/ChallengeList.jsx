@@ -58,29 +58,7 @@ export const ChallengesList = () => {
 		fetchChallenges();
 	}, []);
 
-	// Fetch local images
-	// useEffect(() => {
-	//   const loadLocalImages = () => {
-	//     const images = {
-	//       challenge1: "/challengesImages/amsterdam.png",
-	//       challenge2: "/challengesImages/athens.png",
-	//       challenge3: "/challengesImages/barcelona.png",
-	//       challenge4: "/challengesImages/brussels.png",
-	//       challenge5: "/challengesImages/bucharest.png",
-	//       challenge6: "/challengesImages/copenhagen.png",
-	//       challenge7: "/challengesImages/genoa.png",
-	//       challenge8: "/challengesImages/johngroat.png",
-	//       challenge9: "/challengesImages/lisbon.png",
-	//       challenge10: "/challengesImages/paris.png",
-	//       challenge11: "/challengesImages/rome.png",
-	//       challenge12: "/challengesImages/vienna.png",
-	//     };
-	//     setLocalImages(images);
-	//   };
-	//   loadLocalImages();
-	// }, []);
-
-	// Modal open handler
+	
 	const handleOpenModal = (challenge) => {
 		if (!challengeImages) return;
 
@@ -115,11 +93,6 @@ export const ChallengesList = () => {
 				<ChallengeCard
 					key={challenge._id}
 					challenge={challenge}
-					// challenge={{
-					//   ...challenge,
-					//   // Attach local image based on some identifier (e.g., challenge.imageKey)
-					//   img: localImages[challenge.imageKey],
-					// }}
 					onFindOutMore={() => handleOpenModal(challenge)}
 				/>
 			))}

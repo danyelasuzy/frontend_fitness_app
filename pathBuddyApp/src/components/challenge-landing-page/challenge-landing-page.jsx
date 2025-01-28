@@ -3,6 +3,7 @@ import styles from "./challenge-landing-page.module.css";
 import InfoBox from "./components/InfoBox";
 import Map from "../../utils/map/Map";
 import { useState } from "react";
+import SmallDarkGreenButton from "../Buttons/SmallDarkGreen/SmallDarkGreenButton";
 
 const ChallengePage = () => {
 	const userData = JSON.parse(localStorage.getItem("userData"));
@@ -31,6 +32,11 @@ const ChallengePage = () => {
 					<InfoBox challenge={challenge}  progressKm={progressKm} setProgressKm={setProgressKm} />
 				</div>
 			</div>
+			<footer>
+				<SmallDarkGreenButton onClick={() => window.history.back()}>
+					Back
+				</SmallDarkGreenButton>
+			</footer>
 		</>
 	);
 };

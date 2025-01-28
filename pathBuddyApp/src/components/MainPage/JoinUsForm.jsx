@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SmallDarkGreenButton from "../Buttons/SmallDarkGreen/SmallDarkGreenButton";
+import styles from "./JoinUsForm.module.css"
 
 const JoinUsForm = () => {
 	const [name, setName] = useState("");
@@ -99,7 +100,7 @@ const JoinUsForm = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className={styles.joinUsFormStyle}>
 			<h2>Join us!</h2>
 
 			<input

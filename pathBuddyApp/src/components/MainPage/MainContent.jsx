@@ -26,6 +26,7 @@ const MainContent = () => {
 					here!
 				</q>
 			</p>
+			<div className={styles.loginButtonsContainer}>
 			<LargeLightGreenButton onClick={openLoginModal}>
 				Login
 			</LargeLightGreenButton>
@@ -39,10 +40,11 @@ const MainContent = () => {
 				Join us!
 			</LargeDarkGreenButton>
 			{isJoinUsOpen && (
-				<Modal onClose={closeJoinUsModal}>
+				<Modal onClose={closeJoinUsModal} contentClass={styles.registerModalStyle}>
 					<JoinUsForm />
 				</Modal>
 			)}
+			</div>
 			<h2>Check out our challenges!</h2>
 			{/* tu slider z challengami */}
 		</div>
