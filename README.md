@@ -1,12 +1,28 @@
 🌟 Welcome to the PathBuddy App!
 
 The PathBuddy App is designed to encourage users to get moving and lead healthier, more active lifestyles. 🏃‍♂️🚶‍♀️
-With PathBuddy, you can track your progress, visualize your achievements, and stay motivated to meet your fitness goals! 💪
-✨ What We've Built
+With PathBuddy, you can track your progress, visualise your achievements, and stay motivated to meet your fitness goals! 💪
+
+
+🛠️ Our Process
+
+We adopted a modular approach, splitting the project into frontend and backend repositories. This ensures that edits to the codebase are straightforward and maintainable.
+
+Here’s our original Figma design: https://www.figma.com/design/ljfKmAzIri14fPM2iFofv2/PathBuddy?node-id=0-1&p=f&t=S1AwaUMuMgQtirGN-0
+
+🛠️ Our Development Philosophy
+
+    • Modularity: Each component is self-contained, handling its own data fetching, logic, and styles.
+    • Reusability: Shared elements like buttons and modals are used throughout the app for a cohesive look and feel.
+    • Scalability: The app’s structure makes it easy to add features, such as achievements or social components, in the future.
+    
+In summary, PathBuddy’s design emphasizes simplicity, scalability, and user engagement. Each piece — whether a progress bar, avatar modal, or challenge tracker—plays a role in creating a smooth and motivating experience for users.
+
+✨ What We've Created So Far:
 
 ✅ Motivational Routes
 
-    A selection of routes for users to follow, helping them visualize how far they've walked by comparing it to real-world distances.
+    A selection of routes for users to follow, helping them visualise how far they've walked by comparing it to real-world distances.
 
 ✅ User Account System
 
@@ -27,19 +43,14 @@ With PathBuddy, you can track your progress, visualize your achievements, and st
     Backend: Developed with Node.js and Express, with MongoDB as the database.
     Deployment: Hosted on Heroku for accessibility and ease of use.
 
-🛠️ Our Process
 
-We adopted a modular approach, splitting the project into frontend and backend repositories. This ensures that edits to the codebase are straightforward and maintainable.
+🚧 Goals We Didn't Achieve 
 
-Here’s our original Figma design: https://www.figma.com/design/ljfKmAzIri14fPM2iFofv2/PathBuddy?node-id=0-1&p=f&t=S1AwaUMuMgQtirGN-0
-
-🚧 Goals We Didn't Achieve
-
-While we've accomplished a lot, there are a few features that remain unfinished due to time and budget constraints:
+While we've accomplished a lot, there are a few features that remain unfinished:
 
 ❌ Tracking System with Map API
 
-    Initially, we planned to integrate a map API for automated progress tracking, but due to high costs and limited time, we pivoted to a manual input system.
+    Initially, we planned to integrate a map API for automated progress tracking, but due to time and budget constraints, we pivoted to a manual input system.
 
 ❌ Progress Saving
 
@@ -66,3 +77,52 @@ We're proud of what we've built so far, but we recognize there's room for growth
     🏅 Achievement Badges to reward milestones and keep users engaged.
 
 Thank you for checking out PathBuddy! Your feedback and suggestions are always welcome. Let's keep moving! 🚶‍♀️🌍✨
+
+🔍 Looking for more technical details? 💻✨ Check them out below! 📖👨‍💻
+
+✨ How PathBuddy Works
+
+Frontend (The repository can be found here: https://github.com/danyelasuzy/frontend_fitness_app): 
+
+✅ Component-Based Design
+
+    The app is divided into reusable components, each responsible for a specific feature or functionality.
+    Examples include:
+        ProgressContainer: Fetches and displays the user’s challenge progress.
+        AvatarDisplay: Allows users to personalize their profile with avatars.
+    This modular design ensures that each component can function independently, making the app easier to develop and maintain.
+
+✅ Dynamic Data Flow
+
+    Components communicate through props to share data and trigger updates where necessary.
+    State Management: React’s useState hook handles local component state, while useEffect is used to fetch or update data dynamically (e.g., progress or avatar information).
+
+✅ Backend Integration
+
+    The app communicates with a backend server via REST APIs to:
+        Fetch user progress.
+        Update avatars and other user-specific information.
+    Static assets, such as avatar images, are stored in the /public folder, ensuring quick and reliable access.
+
+✅ Responsive UI
+
+    The app adapts dynamically to user actions:
+        When data is fetched or updated (e.g., user progress), the UI re-renders to display the latest information.
+        Modals (e.g., for avatar selection) enhance the experience without disrupting navigation.
+    Components like buttons and modals are reused across the app, maintaining visual consistency and reducing redundancy.
+
+✅ User-Centric Features
+
+    User data (e.g., avatars, authentication tokens) is stored locally using localStorage, ensuring the app is fast and responsive, even across sessions.
+    Interactive components like progress bars and achievement placeholders motivate users to stay engaged and track their progress.
+
+✅ Page Navigation
+
+    React Router powers seamless transitions between pages. For example:
+        The Welcome Page combines personalized user info (e.g., avatar, progress) with quick links to challenges, leaderboards, and more.
+        Buttons navigate users to different parts of the app, such as selecting a challenge or checking progress.
+
+Backend (The repository can be found here: https://github.com/danyelasuzy/backend_fitness_app):
+
+
+
