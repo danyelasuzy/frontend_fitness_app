@@ -70,7 +70,7 @@ While we've accomplished a lot, there are a few features that remain unfinished:
 
 🔄 What's Next?
 
-We're proud of what we've built so far, but we recognize there's room for growth. Here's what's on the horizon for PathBuddy:
+We're proud of what we've built so far, but we recognise that there's room for growth. Here's what still needs completing for PathBuddy:
 
     🗺️ Automated Progress Tracking using a map API.
     👯 Social Features to connect and compete with friends.
@@ -123,6 +123,51 @@ Frontend (The repository can be found here: https://github.com/danyelasuzy/front
         Buttons navigate users to different parts of the app, such as selecting a challenge or checking progress.
 
 Backend (The repository can be found here: https://github.com/danyelasuzy/backend_fitness_app):
+
+🛠️ PathBuddy Backend Architecture
+
+The PathBuddy backend is built using Node.js, Express, and MongoDB, following a modular, scalable structure to ensure efficiency and maintainability. Here’s how everything fits together:
+
+✅ Models 📊
+
+    Define Mongoose schemas to structure the database.
+    Each model represents a key entity (e.g., User, Challenge, Achievement, Leaderboard).
+    Relationships between models are managed using MongoDB references (e.g., achievements are linked to users).
+
+✅ Controllers ⚙️
+
+    Contain the core business logic for handling API requests.
+    Each function performs actions like user registration, login, fetching progress, or creating achievements.
+    Uses async/await for efficient database interactions.
+
+✅ Routes 🚀
+
+    Define API endpoints that connect the frontend to backend logic.
+    Each major feature (Users, Challenges, Achievements, Leaderboards) has a dedicated set of routes.
+    Example: The Achievement routes allow users to create achievements (/create) and fetch achievements (/user/:userId).
+
+✅ Database Integration 🗄️
+
+    Data is stored in MongoDB, a flexible NoSQL database.
+    Mongoose ensures data validation and handles relationships between models.
+
+✅ Assets 🖼️
+
+    A collection of images used for challenge cards.
+    Each challenge is linked to an image path stored in the database. (This approach is under review for optimisation.)
+
+✅ Security & Authentication 🔒
+
+    User authentication is managed with JWT (JSON Web Tokens).
+    Requests requiring sensitive data (e.g., user progress) include an authorisation token for security.
+
+✅ Seamless Frontend Integration 🔗
+
+    The backend serves as the bridge between the React.js frontend and the MongoDB database.
+    The frontend makes API calls to interact with user data, challenges, and achievements.
+    Example: When a user updates their avatar, the frontend sends a request to the backend to store the change.
+
+This modular structure keeps the backend organised, scalable, and easy to maintain, ensuring a smooth and efficient user experience! 🚀💡
 
 
 
