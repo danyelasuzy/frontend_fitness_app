@@ -83,6 +83,7 @@ Thank you for checking out PathBuddy! Your feedback and suggestions are always w
 ✨ How PathBuddy Works
 
 Frontend (The repository can be found here: https://github.com/danyelasuzy/frontend_fitness_app): 
+Maintainers: Paulina & Lucy
 
 ✅ Component-Based Design
 
@@ -123,6 +124,7 @@ Frontend (The repository can be found here: https://github.com/danyelasuzy/front
         Buttons navigate users to different parts of the app, such as selecting a challenge or checking progress.
 
 Backend (The repository can be found here: https://github.com/danyelasuzy/backend_fitness_app):
+Maintainer: Daniela 
 
 🛠️ PathBuddy Backend Architecture
 
