@@ -2,6 +2,8 @@ import { useState } from "react";
 import SmallDarkGreenButton from "../Buttons/SmallDarkGreen/SmallDarkGreenButton";
 import styles from "./JoinUsForm.module.css"
 
+const backendURL = import.meta.env.VITE_BACKEND_URL;
+
 const JoinUsForm = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -62,7 +64,7 @@ const JoinUsForm = () => {
 		if (validateForm()) {
 			try {
 				const response = await fetch(
-					"https://path-buddy-d047224ae5e0.herokuapp.com/api/users/register",
+					`${backendURL}/api/users/register`,
 					{
 						method: "POST",
 						headers: {
