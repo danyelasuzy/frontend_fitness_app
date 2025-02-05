@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import AgeIcon from "../../assets/Icons/calendar-month.svg";
 import LocationPin from "../../assets/Icons/map-pin.svg";
 import MailIcon from "../../assets/Icons/mail.svg";
+import { useLocation } from "react-router-dom";
 
 const DisplayUserPersonalInfo = () => {
 	const [userData, setUserInfo] = useState(null);
