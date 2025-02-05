@@ -6,6 +6,7 @@ import { useState } from "react";
 import SmallDarkGreenButton from "../Buttons/SmallDarkGreen/SmallDarkGreenButton";
 
 const ChallengePage = () => {
+
 	const userData = JSON.parse(localStorage.getItem("userData"));
 	const location = useLocation();
 	console.log("Location State:", location.state);
