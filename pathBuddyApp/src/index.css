@@ -1,8 +1,9 @@
-* {
+@import "tailwindcss";
+/* * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-}
+} */
 :root {
 	color-scheme: light dark;
 	font-synthesis: none;

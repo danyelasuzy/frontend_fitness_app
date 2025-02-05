@@ -1,4 +1,4 @@
-.modalOverlay {
+/* .modalOverlay {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -11,7 +11,7 @@
 }
 
 .modalContent {
-	/*!!! basic styles, can overwrite making new class for your Modal in contentClass={styles.yourclassname} but need to add this stylization in your's specific component stylization file!!!*/
+	!!! basic styles, can overwrite making new class for your Modal in contentClass={styles.yourclassname} but need to add this stylization in your's specific component stylization file!!!
 	position: relative;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -28,4 +28,4 @@
 	height: 20px;
 	color: #123524;
 	font-size: 16px;
-}
+} */

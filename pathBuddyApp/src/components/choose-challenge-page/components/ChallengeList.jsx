@@ -88,7 +88,7 @@ export const ChallengesList = () => {
 	if (challenges.length === 0) return <div>No challenges found.</div>;
 
 	return (
-		<div className={styles.challengesList}>
+		<div className="flex flex-wrap gap-5 justify-center">
 			{challenges.map((challenge) => (
 				<ChallengeCard
 					key={challenge._id}
@@ -99,17 +99,15 @@ export const ChallengesList = () => {
 
 			{/* Modal for detailed challenge info */}
 			{isOpen && selectedChallenge && (
-				<Modal
-					onClose={handleCloseModal}
-					contentClass={styles.customModalContent}
-				>
-					<div className={styles.selectedChallenge}>
-						<h2>{selectedChallenge.name}</h2>
-						<div className={styles.selectedCardImage}>
-							<img src={selectedChallenge.img} alt={selectedChallenge.name} className={styles.routeImage}/>
+				<Modal onClose={handleCloseModal}>
+					
+					<div className="flex flex-col items-center bg-[#eeeadc] w-[80vw] p-8 rounded-lg shadow-xl">
+						<h2 className="text-3xl font-bold text-[#123524]">{selectedChallenge.name}</h2>
+						<div className="w-[70%] my-4">
+							<img src={selectedChallenge.img} alt={selectedChallenge.name} className="w-full h-auto object-cover shadow-lg"/>
 						</div>
-						<p>{selectedChallenge.description}</p>
-						<div className={styles.distanceSelected}>
+						<p className="text-xl text-[#123524]">{selectedChallenge.description}</p>
+						<div className="flex gap-10 text-lg font-semibold text-[#123524] mt-4">
 							<p>
 								<strong>Distance:</strong> {selectedChallenge.distance} km
 							</p>
@@ -117,7 +115,7 @@ export const ChallengesList = () => {
 								<strong>Difficulty:</strong> {selectedChallenge.difficulty}
 							</p>
 						</div>
-						<div className={styles.customStartButton}>
+						<div className="mt-6">
 							<StartChallengeButton
 								challengeId={selectedChallenge._id}
 								challenge={selectedChallenge}
