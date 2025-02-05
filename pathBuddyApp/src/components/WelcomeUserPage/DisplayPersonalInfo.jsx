@@ -4,25 +4,33 @@ import LocationPin from "../../assets/Icons/map-pin.svg";
 import MailIcon from "../../assets/Icons/mail.svg";
 import axios from "axios";
 
+const backendURL = import.meta.env.VITE_BACKEND_URL;
+
 const DisplayUserPersonalInfo = () => {
 	const [userData, setUserInfo] = useState(null);
 
 	useEffect(() => {
-		// const fetchRegisteredChallenge = async () => {
-		// 	try {
-		// 		const registeredChallenge = await axios.get("https://path-buddy-d047224ae5e0.herokuapp.com/api/users/registeredChallenge");
-
-		// 	} catch (error) {
-		// 		console.error("Error fetching data:", error);
-		// 	}
-		// }
-
 		const storedUser = JSON.parse(localStorage.getItem("userData"));
-		console.log('user data from local storage: ', storedUser)
 		if (storedUser) {
 			setUserInfo(storedUser);
 		}
 	}, []);
+
+	useEffect(() => {
+        if (userData) {        			
+			const fetchRegisteredChallenge = async () => {
+				const userId = userData._id;
+				try {					
+					const registeredChallenge = await axios.get(`${backendURL}/api/users/${userId}/currentChallenge`);
+					console.log('registeredChallenge: ', registeredChallenge);
+
+				} catch (error) {
+					console.error("Error fetching data:", error);
+				}
+			}
+			fetchRegisteredChallenge();				
+        }
+    }, [userData]);
 
 	if (!userData) {
 		return <p>Loading user data...</p>; // Możesz dać spinner zamiast tekstu

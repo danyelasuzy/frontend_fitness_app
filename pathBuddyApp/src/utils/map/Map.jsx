@@ -7,11 +7,8 @@ import PropTypes from "prop-types";
 export default function Map({ challenge, user, progressKm, setProgressKm }) {
 	const storedAvatar =
 		user && user.avatarUrl ? user.avatarUrl : "/Avatars/lazyPanda.png";
-	console.log("User in Map component:", user);
-	console.log("Avatar URL:", storedAvatar);
 	const mapRef = useRef(null);
-	const avatarMarkerRef = useRef(null);
-	console.log("Avatar from localStorage:", storedAvatar);
+	const avatarMarkerRef = useRef(null);	
 	// Coordinates and intermediate waypoints
 	const startPoint = useMemo(() => {
 		return challenge?.startPoint?.coordinates
@@ -32,9 +29,6 @@ export default function Map({ challenge, user, progressKm, setProgressKm }) {
 		() => challenge?.route || [startPoint, endPoint],
 		[challenge, startPoint, endPoint]
 	);
-
-	console.log("Start Point:", startPoint);
-	console.log("End Point:", endPoint);
 
 	useEffect(() => {
 		if (!startPoint || !endPoint) return;

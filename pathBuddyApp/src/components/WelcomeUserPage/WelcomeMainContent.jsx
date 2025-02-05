@@ -8,6 +8,8 @@ import Map from "../../utils/map/Map";
 
 const WelcomeMainContent = () => {
 	const navigate = useNavigate();
+	
+
 	return (
 		<div className={styles.welcomePageContent}>
 			{/* Avatar with user info */}
