@@ -2,6 +2,8 @@ import { useState } from "react";
 import SmallDarkGreenButton from "../Buttons/SmallDarkGreen/SmallDarkGreenButton";
 import styles from "./LoginForm.module.css";
 
+const backendURL = import.meta.env.VITE_BACKEND_URL;
+
 const LoginForm = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -33,7 +35,7 @@ const LoginForm = () => {
 		}
 		try {
 			const response = await fetch(
-				"https://path-buddy-d047224ae5e0.herokuapp.com/api/users/login",
+				`${backendURL}/api/users/login`,
 				{
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
@@ -65,7 +67,7 @@ const LoginForm = () => {
 		}
 		try {
 			const response = await fetch(
-				"https://path-buddy-d047224ae5e0.herokuapp.com/api/resetPassword/:token",
+				`${backendURL}/api/resetPassword/:token`,
 				{
 					method: "PATCH",
 					headers: { "Content type": "application/json" },

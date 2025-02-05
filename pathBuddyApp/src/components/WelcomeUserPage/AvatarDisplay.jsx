@@ -3,6 +3,8 @@ import useModalManager from "../Modal/useModalManager";
 import Modal from "../Modal/Modal";
 import styles from "./AvatarDisplay.module.css";
 
+const backendURL = import.meta.env.VITE_BACKEND_URL;
+
 const AvatarDisplay = () => {
 	const {
 		isOpen: isAvatarsOpen,
@@ -48,7 +50,7 @@ const AvatarDisplay = () => {
 		// Sending to backend!!
 		try {
 			const response = await fetch(
-				"https://path-buddy-d047224ae5e0.herokuapp.com/api/users/update-avatar",
+				`${backendURL}/api/users/update-avatar`,
 				{
 					method: "PATCH",
 					headers: {

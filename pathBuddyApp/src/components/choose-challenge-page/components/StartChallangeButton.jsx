@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import LargeDarkGreenButton from "../../Buttons/LargeDarkGreen/LargeDarkGreenButton";
 import { useLocation } from "react-router-dom";
 
+const backendURL = import.meta.env.VITE_BACKEND_URL;
+
 const StartChallengeButton = ({ challengeId, challenge }) => {
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -10,7 +12,7 @@ const StartChallengeButton = ({ challengeId, challenge }) => {
 
 	const registerUserToChallenge = async (challengeId, userId) => {
 		try {
-			const response = await fetch(`https://path-buddy-d047224ae5e0.herokuapp.com/api/challenges/${challengeId}/register`, {
+			const response = await fetch(`${backendURL}/api/challenges/${challengeId}/register`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
