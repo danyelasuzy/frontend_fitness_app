@@ -3,7 +3,7 @@ import WelcomePage from "./components/WelcomeUserPage/WelcomePage";
 import ChooseChallengePage from "./components/choose-challenge-page/choose-challenge-page";
 import ChallengePage from "./components/challenge-landing-page/challenge-landing-page";
 import Map from "./utils/map/Map";
-
+import "./App.css" 
 import {
 	BrowserRouter as Router,
 	Route,

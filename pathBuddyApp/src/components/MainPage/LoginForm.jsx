@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SmallDarkGreenButton from "../Buttons/SmallDarkGreen/SmallDarkGreenButton";
 import styles from "./LoginForm.module.css";
+import { Navigate } from "react-router-dom";
 
 const LoginForm = () => {
 	const [email, setEmail] = useState("");
