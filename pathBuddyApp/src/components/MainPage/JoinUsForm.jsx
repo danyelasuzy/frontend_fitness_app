@@ -1,5 +1,8 @@
 import { useState } from "react";
 import SmallDarkGreenButton from "../Buttons/SmallDarkGreen/SmallDarkGreenButton";
+import styles from "./JoinUsForm.module.css"
+import { useNavigate } from "react-router-dom";
+=======
 //import styles from "./JoinUsForm.module.css" ! CONVERTED TO TAILWIND
 //import { use } from "react";
 
@@ -17,6 +20,7 @@ const JoinUsForm = () => {
 	const [emailError, setEmailError] = useState("");
 	const [ageError, setAgeError] = useState("");
 	const [passwordError, setPasswordError] = useState("");
+	const navigate = useNavigate();
 
 	const validateForm = () => {
 		let isValid = true;
@@ -92,6 +96,7 @@ const JoinUsForm = () => {
 					setLocation("");
 					setPassword("");
 					setConfirmPassword("");
+					window.location.href = "/welcome";
 				} else {
 					alert(`Error: ${data.message}`);
 				}
