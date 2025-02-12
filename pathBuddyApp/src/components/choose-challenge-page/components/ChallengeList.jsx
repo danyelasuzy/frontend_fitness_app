@@ -5,6 +5,8 @@ import Modal from "../../Modal/Modal";
 import useModalManager from "../../Modal/useModalManager";
 import StartChallengeButton from "./StartChallangeButton";
 
+const backendURL = import.meta.env.VITE_BACKEND_URL;
+
 export const ChallengesList = () => {
 	const [challenges, setChallenges] = useState([]);
 	// const [localImages, setLocalImages] = useState({});//for local images
@@ -29,7 +31,7 @@ export const ChallengesList = () => {
 		const fetchChallenges = async () => {
 			try {
 				const response = await fetch(
-					"https://path-buddy-d047224ae5e0.herokuapp.com/api/challenges/getAllChallenges",
+					`${backendURL}/api/challenges/getAllChallenges`,
 					{
 						method: "GET",
 						headers: { "Content-Type": "application/json" },
