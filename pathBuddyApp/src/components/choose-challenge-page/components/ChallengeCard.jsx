@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "./ChallengeCard.module.css";
+//import styles from "./ChallengeCard.module.css";
 import SmallDarkGreenButton from "../../Buttons/SmallDarkGreen/SmallDarkGreenButton";
 import { useState, useEffect } from "react";
 
@@ -24,21 +24,21 @@ const ChallengeCard = ({ challenge, onFindOutMore }) => {
 	console.log("Image path:", imagePath);
 
 	return (
-		<div className={styles.challengeCard}>
+		<div className="flex flex-col items-center justify-between bg-white/70 border border-gray-300 rounded-xl shadow-lg w-[400px] overflow-hidden mt-10 transition-transform duration-300 hover:-translate-y-2">
 			<img
 				src={imagePath}
 				alt={challenge.name}
-				className={styles.challengeCardImage}
+				className="w-full h-[200px] object-cover"
 			/>
-			<div className={styles.challengeCardDetails}>
-				<h2>{challenge.name}</h2>
-				<p>
+			<div className="p-4 text-center">
+				<h2 className="text-xl font-[Lato] italic text-gray-800">{challenge.name}</h2>
+				<p className="mt-2 text-lg text-gray-600">
 					<strong>Distance:</strong> {challenge.distance} km
 				</p>
-				<p>
+				<p className="text-lg text-gray-600">
 					<strong>Difficulty:</strong> {challenge.difficulty}
 				</p>
-				<div className={styles.customButton}>
+				<div className="flex items-center justify-center mt-4">
 					<SmallDarkGreenButton onClick={onFindOutMore}>
 						Find out more
 					</SmallDarkGreenButton>

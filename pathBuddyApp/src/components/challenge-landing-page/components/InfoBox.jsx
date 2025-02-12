@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+//import { useState } from "react";
 import ProgressInput from "./ProgressInput";
 import styles from "./InfoBox.module.css";
 
@@ -20,18 +20,18 @@ const InfoBox = ({ challenge, progressKm, setProgressKm }) => {
 	return (
 		<>
 			{/* Input for Progress */}
-			<div className={styles.ProgresDetails}>
-				<h3>Enter progress:</h3>
+			<div className="flex flex-row gap-5 items-center my-5">
+				<h3 className="text-2xl text-[#123524]">Enter progress:</h3>
 				<ProgressInput onProgressChange={setProgressKm} />
 			</div>
-			<div className={styles.BoxContainer}>
-				<p>
+			<div className="bg-[#66773380] w-full p-4 md:p-6 rounded-md shadow-[0_0_15px_0_black]">
+				<p className="text-2xl text-[#123524]">
 					Total Distance: <strong>{challenge.distance} km</strong>
 				</p>
-				<p>
+				<p className="text-2xl text-[#123524]"> 
 					Progress: <strong>{progressKm} km</strong>
 				</p>
-				<p>
+				<p className="text-2xl text-[#123524]">
 					Distance Until Destination:{" "}
 					<strong>
 						{distanceUntilDestination > 0
@@ -39,13 +39,13 @@ const InfoBox = ({ challenge, progressKm, setProgressKm }) => {
 							: "You have reached your destination!"}
 					</strong>
 				</p>
-				<p>
+				<p className="text-2xl text-[#123524]">
 					Progress Percentage: <strong>{progressPercentage}%</strong>
 				</p>
 				{/* Progress Bar */}
-				<div className={styles.ProgresBar}>
+				<div className="mt-5 w-full bg-[#ddd] h-[30px] rounded-lg overflow-hidden">
 					<div
-						className={styles.ProgresBarFilled}
+						className="h-full transition-all duration-300 ease-in-out"
 						style={{
 							width: `${progressPercentage}%`,
 							background:

@@ -3,6 +3,8 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import Map from "./Map";
 
+const backendURL = import.meta.env.VITE_BACKEND_URL;
+
 const ChallengeSelector = ({ user }) => {
 	const [challenges, setChallenges] = useState([]); // All available challenges
 	const [selectedChallenge, setSelectedChallenge] = useState(null); // Currently selected challenge
@@ -14,13 +16,13 @@ const ChallengeSelector = ({ user }) => {
 		const fetchChallenges = async () => {
 			try {
 				const challengeResponse = await axios.get(
-					"https://path-buddy-d047224ae5e0.herokuapp.com/api/challenges"
+					`${backendURL}/api/challenges`
 				);
 				setChallenges(challengeResponse.data.data);
 
 				// Fetch the user's current challenge
 				const userChallengeResponse = await axios.get(
-					`https://path-buddy-d047224ae5e0.herokuapp.com/api/users/${user._id}/currentChallenge`
+					`${backendURL}/api/users/${user._id}/currentChallenge`
 				);
 				setUserChallenge(userChallengeResponse.data.data);
 			} catch (error) {

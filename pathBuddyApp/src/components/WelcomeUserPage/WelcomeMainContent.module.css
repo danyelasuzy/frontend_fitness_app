@@ -1,4 +1,4 @@
-body {
+/* body {
 	margin: 0 auto;
 	width: 100vw;
 }
@@ -75,7 +75,7 @@ h4 {
 .routeContainer {
 	width: 98%;
 	background-color: hsla(75, 40%, 33%, 0.5);
-	/* height to change for auto probably */
+	// height to change for auto probably 
 	height: 150px;
 	object-fit: contain;
 }
@@ -96,4 +96,4 @@ h4 {
 	gap: 3px;
 	border-radius: 5px;
 	box-shadow: 0 0 5px 0px black;
-}
+} */
