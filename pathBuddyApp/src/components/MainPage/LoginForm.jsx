@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SmallDarkGreenButton from "../Buttons/SmallDarkGreen/SmallDarkGreenButton";
-import styles from "./LoginForm.module.css";
+//import styles from "./LoginForm.module.css"; ! CONVERTED TO TAILWIND
 
 const backendURL = import.meta.env.VITE_BACKEND_URL;
 
@@ -89,43 +89,52 @@ const LoginForm = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} className={styles.loginFormStyle}>
-			{!isForgotPassword ? (
-				<>
-					<input
-						type="text"
-						placeholder="Email"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-					/>
-					<input
-						type="password"
-						placeholder="Password"
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
-					/>
-					<SmallDarkGreenButton>Login</SmallDarkGreenButton>
-					<a onClick={handleForgotPassword}>Forgot Password?</a>
-				</>
-			) : (
-				<>
-					{/* Form to reset password */}
-					<h2>Reset Password</h2>
-					<input
-						type="text"
-						placeholder="Enter your email"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-					/>
-					<SmallDarkGreenButton onClick={handleResetPassword}>
-						Reset Password
-					</SmallDarkGreenButton>
-					<SmallDarkGreenButton onClick={handleBackToLogin}>
-						Back to Login
-					</SmallDarkGreenButton>
-				</>
-			)}
-		</form>
+		<form onSubmit={handleSubmit} className="flex flex-col gap-5 font-serif text-base">
+	{!isForgotPassword ? (
+		<>
+			<input
+				type="text"
+				placeholder="Email"
+				value={email}
+				onChange={(e) => setEmail(e.target.value)}
+				className="px-3 py-2 italic bg-[#f2f0ea] border border-gray-300 rounded-md"
+			/>
+			<input
+				type="password"
+				placeholder="Password"
+				value={password}
+				onChange={(e) => setPassword(e.target.value)}
+				className="px-3 py-2 italic bg-[#f2f0ea] border border-gray-300 rounded-md"
+			/>
+			<SmallDarkGreenButton>Login</SmallDarkGreenButton>
+			<a
+				href="#"
+				onClick={handleForgotPassword}
+				className="text-sm text-black hover:underline"
+			>
+				Forgot Password?
+			</a>
+		</>
+	) : (
+		<>
+			<h2 className="text-xl font-semibold text-[#123524]">Reset Password</h2>
+			<input
+				type="text"
+				placeholder="Enter your email"
+				value={email}
+				onChange={(e) => setEmail(e.target.value)}
+				className="px-3 py-2 italic bg-[#f2f0ea] border border-gray-300 rounded-md"
+			/>
+			<SmallDarkGreenButton onClick={handleResetPassword}>
+				Reset Password
+			</SmallDarkGreenButton>
+			<SmallDarkGreenButton onClick={handleBackToLogin}>
+				Back to Login
+			</SmallDarkGreenButton>
+		</>
+	)}
+</form>
+
 	);
 };
 

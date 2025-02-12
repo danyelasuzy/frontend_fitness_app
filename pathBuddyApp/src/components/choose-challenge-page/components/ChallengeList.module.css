@@ -1,4 +1,4 @@
-.challengesList {
+/* .challengesList {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
@@ -21,8 +21,7 @@
 	width: 70%;
 	height: auto;
 	margin: 0 auto;
-
-	/* object-fit: cover; */
+	// object-fit: cover; 
 }
 
 .routeImage {
@@ -61,4 +60,4 @@
 
 .customStartButton {
 	margin: 0 auto;
-}
+} */

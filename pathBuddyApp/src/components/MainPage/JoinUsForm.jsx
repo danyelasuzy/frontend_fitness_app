@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SmallDarkGreenButton from "../Buttons/SmallDarkGreen/SmallDarkGreenButton";
-import styles from "./JoinUsForm.module.css"
+//import styles from "./JoinUsForm.module.css" ! CONVERTED TO TAILWIND
+//import { use } from "react";
 
 const backendURL = import.meta.env.VITE_BACKEND_URL;
 
@@ -102,49 +103,55 @@ const JoinUsForm = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} className={styles.joinUsFormStyle}>
-			<h2>Join us!</h2>
+		<form onSubmit={handleSubmit} className="flex flex-col gap-5 text-lg">
+			<h2 className="text-[#123524] font-bold text-2xl">Join us!</h2>
 
 			<input
 				type="text"
 				placeholder="Name or nickname"
 				value={name}
 				onChange={(e) => setName(e.target.value)}
+				className="p-2 italic bg-[#f2f0ea] rounded-md"
 			/>
-			{nameError && <p style={{ color: "red" }}>{nameError}</p>}
+			{nameError && <p className="text-red-500">{nameError}</p>}
 			<input
 				type="email"
 				placeholder="example@email.com"
 				value={email}
 				onChange={(e) => setEmail(e.target.value)}
+				className="p-2 italic bg-[#f2f0ea] rounded-md"
 			/>
-			{emailError && <p style={{ color: "red" }}>{emailError}</p>}
+			{emailError && <p className="text-red-500">{emailError}</p>}
 			<input
 				type="text"
 				placeholder="Age"
 				value={age}
 				onChange={(e) => setAge(e.target.value)}
+				className="p-2 italic bg-[#f2f0ea] rounded-md"
 			/>
-			{ageError && <p style={{ color: "red" }}>{ageError}</p>}
+			{ageError && <p className="text-red-500">{ageError}</p>}
 			<input
 				type="text"
 				placeholder="Location"
 				value={location}
 				onChange={(e) => setLocation(e.target.value)}
+				className="p-2 italic bg-[#f2f0ea] rounded-md"
 			/>
 			<input
 				type="password"
 				placeholder="Password"
 				value={password}
 				onChange={(e) => setPassword(e.target.value)}
+				className="p-2 italic bg-[#f2f0ea] rounded-md"
 			/>
 			<input
 				type="password"
 				placeholder="Confirm password"
 				value={confirmPassword}
 				onChange={(e) => setConfirmPassword(e.target.value)}
+				className="p-2 italic bg-[#f2f0ea] rounded-md"
 			/>
-			{passwordError && <p style={{ color: "red" }}>{passwordError}</p>}
+			{passwordError && <p className="text">{passwordError}</p>}
 			<SmallDarkGreenButton>Submit!</SmallDarkGreenButton>
 		</form>
 	);

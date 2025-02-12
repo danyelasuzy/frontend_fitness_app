@@ -1,6 +1,6 @@
 // Main content of user Welcome Page that we have after succesful login
 import MediumDarkGreenButton from "../Buttons/MediumDarkGreen/MediumDarkGreenButton";
-import styles from "./WelcomeMainContent.module.css";
+// import styles from "./WelcomeMainContent.module.css"; ! CONVERTED TO TAILWIND CSS
 import AvatarDisplay from "./AvatarDisplay";
 import DisplayPersolnalInfo from "./DisplayPersonalInfo";
 import { useNavigate } from "react-router-dom";
@@ -9,32 +9,32 @@ import Map from "../../utils/map/Map";
 const WelcomeMainContent = () => {
 	const navigate = useNavigate();
 	return (
-		<div className={styles.welcomePageContent}>
+		<div className="flex flex-col items-center w-[95vw] min-h-screen p-5 box-border">
 			{/* Avatar with user info */}
-			<section className={styles.userProfile}>
+			<section className="flex w-full justify-start gap-5 items-center p-2 bg-[rgba(160,120,63,0.251)] rounded-md shadow-md">
 				<div>
 					<AvatarDisplay />
 				</div>
-				<div className={styles.personalInfo}>
+				<div className="flex flex-col gap-2">
 					<DisplayPersolnalInfo />
 				</div>
 			</section>
-			<section className={styles.containerForBtnAndAchievemens}>
 				{/* Map and badges */}
-
-				<section className={styles.userAchievements}>
+			<section className="flex flex-row justify-between gap-5 mt-5 w-full">
+				<section className="p-2 flex flex-col gap-5 w-3/5 rounded-md shadow-md bg-[rgba(160,120,63,0.251)]">
 					<div>
-						<h2 className="welcomeH2">Current route:</h2>
-						<div className={styles.routeContainer}>
+						<h2 className="font-lato text-lg italic text-[#123524]">Current route:</h2>
+						<div className="w-[98%] h-[150px] bg-[hsla(75,40%,33%,0.5)] object-contain">
 							<Map />
 						</div>
 					</div>
 					<div>
-						<h2 className="welcomeH2">Your badges:</h2>
-						<div className={styles.badgesContainer}></div>
+						<h2 className="font-lato text-lg italic text-[#123524]">Your badges:</h2>
+						<div className="w-[98%] h-[150px] border border-black"></div>
 					</div>
 				</section>
-				<section className={styles.buttons}>
+				{/* Buttons */}
+				<section className="flex flex-col w-40 h-auto p-1 bg-[rgba(160,120,63,0.251)] items-center gap-1 rounded-md shadow-md">
 					<MediumDarkGreenButton onClick={() => navigate("/chooseChallenge")}>
 						{" "}
 						Chose challenge

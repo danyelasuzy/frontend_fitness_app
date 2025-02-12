@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import useModalManager from "../Modal/useModalManager";
 import Modal from "../Modal/Modal";
-import styles from "./AvatarDisplay.module.css";
+//import styles from "./AvatarDisplay.module.css"; ! CONVERTED TO TAILWIND CSS
 
 const backendURL = import.meta.env.VITE_BACKEND_URL;
 
@@ -72,12 +72,12 @@ const AvatarDisplay = () => {
 	};
 
 	return (
-		<div className={styles.avatarContainer}>
+		<div className="flex items-center justify-center w-[150px] h-[150px] bg-green-800/50 rounded-md cursor-pointer overflow-hidden ">
 			{/* Show avatar from DB or placeholder */}
 			{avatar ? (
-				<img src={avatar} alt="User Avatar" className={styles.avatarImage} />
+				<img src={avatar} alt="User Avatar" className="w-[95%] h-[95%] object-contain rounded-md" />
 			) : (
-				<div className={styles.avatarPlaceholder} onClick={openAvatarsModal}>
+				<div className="flex items-center justify-center w-full h-full text-lg text-[#123524] font-lato" onClick={openAvatarsModal}>
 					Choose Avatar
 				</div>
 			)}
@@ -86,15 +86,15 @@ const AvatarDisplay = () => {
 			{isAvatarsOpen && (
 				<Modal
 					onClose={closeAvatarsModal}
-					contentClass={styles.avatarsModalStyle}
+					contentClass="w-[80vw] bg-[#efe3c2] p-5 shadow-lg rounded-md"
 				>
-					<div className={styles.avatarSelection}>
+					<div className="flex flex-wrap justify-center gap-4">
 						{avatarsCollection.map((avatar, index) => (
 							<img
 								key={index}
 								src={avatar}
 								alt={`Avatar ${index}`}
-								className={styles.avatarOption}
+								className="w-[90px] h-[90px] cursor-pointer transition-transform transform hover:scale-110 object-contain shadow-md p-1 bg-green-800/30 rounded-md"
 								onClick={() => handleSelectAvatar(avatar)}
 							/>
 						))}

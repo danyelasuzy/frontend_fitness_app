@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import styles from "./challenge-landing-page.module.css";
+//import styles from "./challenge-landing-page.module.css";
 import InfoBox from "./components/InfoBox";
 import Map from "../../utils/map/Map";
 import { useState } from "react";
@@ -21,19 +21,19 @@ const ChallengePage = () => {
 	}
 	return (
 		<>
-			<div className={styles.TitleContainer}>
-				<h1 className={styles.Title}>Challenge Route</h1>
-				<h3 className={styles.ChallengeTitle}>{challenge.name}</h3>
+			<div className="flex flex-col items-center mb-10">
+				<h1 className="text-6xl font-[dynapuff] text-[#123524]">Challenge Route</h1>
+				<h3 className="font-[lato] italic text-3xl text-[#333] pt-4">{challenge.name}</h3>
 			</div>
-			<div className={styles.MainContainer}>
-				<div className={styles.MapContainer}>
+			<div className="flex flex-col w-full justify-center mb-8">
+				<div className="w-[70vw] h-[50vh] shadow-[0_0_30px_0_black] mx-auto">
 					<Map challenge={challenge} user={userData} progressKm={progressKm} setProgressKm={setProgressKm} />
 				</div>
-				<div className={styles.InfoBoxContainer}>
+				<div className="flex flex-col w-[90%] mt-12 ml-8">
 					<InfoBox challenge={challenge}  progressKm={progressKm} setProgressKm={setProgressKm} />
 				</div>
 			</div>
-			<footer>
+			<footer> 
 				<SmallDarkGreenButton onClick={() => window.history.back()}>
 					Back
 				</SmallDarkGreenButton>
